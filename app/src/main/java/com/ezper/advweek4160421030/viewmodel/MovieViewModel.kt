@@ -22,23 +22,34 @@ class MovieViewModel(application: Application):AndroidViewModel(application) {
     private var queue:RequestQueue ?= null
 
     fun refresh() {
+        loadingLD.value = true
+        movieLoadErrorLD.value = false
         Log.d("CEKMASUK", "masukvolley")
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://10.12.162.236/movies/movies.json"
+        val url = "http://10.0.2.2/movies/movies.json"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
-            {
-                val sType = object : TypeToken<List<Movie>>() {}.type
-                val result = Gson().fromJson<List<Student>>(it, sType)
-                moviesLD.value = result as ArrayList<Movie>
-                Log.d("showvolley", result.toString())
+            { response ->
+                val mType = object : TypeToken<List<Movie>>() {}.type
+                val result = Gson().fromJson<List<Movie>>(response, mType)
+                moviesLD.value = result as ArrayList<Movie>?
+                Log.d("showvoley", result.toString())
             },
-            {
-                Log.d("showvolley", it.toString())
+            { error ->
+                Log.e("showvoley", "Error fetching data: ${error.message}")
+                Log.e("showvoley", "Error fetching data", error)
+                movieLoadErrorLD.value = false
+                loadingLD.value = false
             }
         )
 
         stringRequest.tag = TAG
         queue?.add(stringRequest)
     }
+
+    override fun onCleared() {
+        super.onCleared()
+        queue?.cancelAll(TAG)
+    }
+
 }
