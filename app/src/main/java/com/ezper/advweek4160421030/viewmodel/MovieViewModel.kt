@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
@@ -20,6 +21,8 @@ class MovieViewModel(application: Application):AndroidViewModel(application) {
 
     val TAG = "volleyTag"
     private var queue:RequestQueue ?= null
+
+    val MY_SOCKET_TIMEOUT_MS = 5000
 
     fun refresh() {
         loadingLD.value = true
@@ -41,7 +44,14 @@ class MovieViewModel(application: Application):AndroidViewModel(application) {
                 movieLoadErrorLD.value = false
                 loadingLD.value = false
             }
-        )
+        ).apply {
+            // Set timeout duration (milliseconds)
+            retryPolicy = DefaultRetryPolicy(
+                MY_SOCKET_TIMEOUT_MS,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+            )
+        }
 
         stringRequest.tag = TAG
         queue?.add(stringRequest)
