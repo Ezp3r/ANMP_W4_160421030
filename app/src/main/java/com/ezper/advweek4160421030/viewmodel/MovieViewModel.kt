@@ -24,7 +24,7 @@ class MovieViewModel(application: Application):AndroidViewModel(application) {
     fun refresh() {
         Log.d("CEKMASUK", "masukvolley")
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://203.114.224.244/movies/movies.json"
+        val url = "http://10.12.162.236/movies/movies.json"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             {

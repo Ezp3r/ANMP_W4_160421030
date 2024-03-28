@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "genre": "Action, Adventure, Sci-Fi",
+    "director": {
+      "name": "Christopher Nolan",
+      "birth_year": 1970,
+      "nationality": "British-American"
+    },
+    "release_year": 2010,
+    "rating": 8.8,
+    "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+    "plot": "A thief who enters the dreams of others to steal their secrets from their subconscious."
+  },
+  {
+    "id": 2,
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "director": {
+      "name": "Frank Darabont",
+      "birth_year": 1959,
+      "nationality": "American"
+    },
+    "release_year": 1994,
+    "rating": 9.3,
+    "cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+    "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+  },
+  {
+    "id": 3,
+    "title": "The Godfather",
+    "genre": "Crime, Drama",
+    "director": {
+      "name": "Francis Ford Coppola",
+      "birth_year": 1939,
+      "nationality": "American"
+    },
+    "release_year": 1972,
+    "rating": 9.2,
+    "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
+    "plot": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
+  },
+  {
+    "id": 4,
+    "title": "Pulp Fiction",
+    "genre": "Crime, Drama",
+    "director": {
+      "name": "Quentin Tarantino",
+      "birth_year": 1963,
+      "nationality": "American"
+    },
+    "release_year": 1994,
+    "rating": 8.9,
+    "cast": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+  },
+  {
+    "id": 5,
+    "title": "Forrest Gump",
+    "genre": "Drama, Romance",
+    "director": {
+      "name": "Robert Zemeckis",
+      "birth_year": 1952,
+      "nationality": "American"
+    },
+    "release_year": 1994,
+    "rating": 8.8,
+    "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+    "plot": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart."
+  },
+  {
+    "id": 6,
+    "title": "The Dark Knight",
+    "genre": "Action, Crime, Drama",
+    "director": {
+      "name": "Christopher Nolan",
+      "birth_year": 1970,
+      "nationality": "British-American"
+    },
+    "release_year": 2008,
+    "rating": 9.0,
+    "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+  },
+  {
+    "id": 7,
+    "title": "Schindler's List",
+    "genre": "Biography, Drama, History",
+    "director": {
+      "name": "Steven Spielberg",
+      "birth_year": 1946,
+      "nationality": "American"
+    },
+    "release_year": 1993,
+    "rating": 8.9,
+    "cast": ["Liam Neeson", "Ralph Fiennes", "Ben Kingsley"],
+    "plot": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis."
+  },
+  {
+    "id": 8,
+    "title": "The Lord of the Rings: The Return of the King",
+    "genre": "Action, Adventure, Drama",
+    "director": {
+      "name": "Peter Jackson",
+      "birth_year": 1961,
+      "nationality": "New Zealander"
+    },
+    "release_year": 2003,
+    "rating": 8.9,
+    "cast": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"],
+    "plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring."
+  },
+  {
+    "id": 9,
+    "title": "Fight Club",
+    "genre": "Drama",
+    "director": {
+      "name": "David Fincher",
+      "birth_year": 1962,
+      "nationality": "American"
+    },
+    "release_year": 1999,
+    "rating": 8.8,
+    "cast": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+    "plot": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more."
+  },
+  {
+    "id": 10,
+    "title": "Goodfellas",
+    "genre": "Biography, Crime, Drama",
+    "director": {
+      "name": "Martin Scorsese",
+      "birth_year": 1942,
+      "nationality": "American"
+    },
+    "release_year": 1990,
+    "rating": 8.7,
+    "cast": ["Robert De Niro", "Ray Liotta", "Joe Pesci"],
+    "plot": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate."
+  }
+]
