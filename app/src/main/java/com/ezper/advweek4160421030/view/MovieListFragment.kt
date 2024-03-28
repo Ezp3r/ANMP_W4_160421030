@@ -54,6 +54,7 @@ class MovieListFragment : Fragment() {
         viewModel.moviesLD.observe(viewLifecycleOwner, Observer {
             movieListAdapter.updateMovieList(it)
         })
+
         viewModel.movieLoadErrorLD.observe(viewLifecycleOwner, Observer {
             if (it == true){
                 binding.txtMovieError.visibility = View.VISIBLE
@@ -62,6 +63,7 @@ class MovieListFragment : Fragment() {
                 binding.txtMovieError.visibility = View.GONE
             }
         })
+
         viewModel.loadingLD.observe(viewLifecycleOwner, Observer {
             if (it == true) {
                 binding.progressBar.visibility = View.VISIBLE
