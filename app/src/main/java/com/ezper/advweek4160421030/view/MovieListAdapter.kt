@@ -26,12 +26,14 @@ class MovieListAdapter(val movieList:ArrayList<Movie>)
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         holder.binding.txtTitle.text = movieList[position].title
         holder.binding.txtGenre.text = movieList[position].genre
-        holder.binding.txtDirectorName.text = movieList[position].director?.name ?: "unknown"
-        holder.binding.txtDirectorBirthYear.text = movieList[position].director?.birthYear?.toString() ?: "Unknown"
-        holder.binding.txtDirectorNationality.text = movieList[position].director?.nationality ?: "Unknown"
+        holder.binding.txtDirectorName.text = movieList[position].director?.name
+        holder.binding.txtDirectorBirthYear.text = movieList[position].director?.birthYear?.toString()
+        holder.binding.txtDirectorNationality.text = movieList[position].director?.nationality
         holder.binding.txtRelease.text = movieList[position].releaseYear.toString()
         holder.binding.txtRating.text = movieList[position].rating.toString()
-        holder.binding.txtCast.text = movieList[position].cast?.joinToString("\n") ?: "Unknown"
+        holder.binding.txtCast1.text = movieList[position].cast[0]
+        holder.binding.txtCast2.text = movieList[position].cast[1]
+        holder.binding.txtCast3.text = movieList[position].cast[2]
         holder.binding.txtPlot.text = movieList[position].plot
 
     }

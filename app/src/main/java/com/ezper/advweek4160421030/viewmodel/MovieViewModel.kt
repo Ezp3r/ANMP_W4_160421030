@@ -31,15 +31,15 @@ class MovieViewModel(application: Application):AndroidViewModel(application) {
         val url = "http://10.0.2.2/movies/movies.json"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
-            { response ->
+            {
                 val mType = object : TypeToken<List<Movie>>() {}.type
-                val result = Gson().fromJson<List<Movie>>(response, mType)
+                val result = Gson().fromJson<List<Movie>>(it, mType)
                 moviesLD.value = result as ArrayList<Movie>?
                 Log.d("showvoley", result.toString())
             },
-            { error ->
-                Log.e("showvoley", "Error fetching data: ${error.message}")
-                Log.e("showvoley", "Error fetching data", error)
+            {
+                Log.d("showvoley", it.toString())
+                movieLoadErrorLD.value = false
                 loadingLD.value = false
             }
         )
