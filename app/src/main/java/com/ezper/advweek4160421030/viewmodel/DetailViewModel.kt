@@ -14,7 +14,7 @@ import com.google.gson.reflect.TypeToken
 import androidx.lifecycle.AndroidViewModel
 
 class DetailViewModel(application: Application):AndroidViewModel(application) {
-    val studentLD = MutableLiveData<ArrayList<Student>>()
+    val studentLD = MutableLiveData<Student>()
 
     val TAG = "volleyTag"
     private var queue: RequestQueue?= null
@@ -33,8 +33,8 @@ class DetailViewModel(application: Application):AndroidViewModel(application) {
             {
                 Log.d("show_volley", it)
                 val sType = object : TypeToken<List<Student>>() {}.type
-                val result = Gson().fromJson<List<Student>>(it, sType)
-                studentLD.value = result as ArrayList<Student>
+                val result = Gson().fromJson<Student>(it, sType)
+                studentLD.value = result
 
             },
             {
