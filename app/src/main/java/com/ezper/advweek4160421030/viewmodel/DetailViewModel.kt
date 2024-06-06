@@ -32,7 +32,7 @@ class DetailViewModel(application: Application):AndroidViewModel(application) {
             url,
             {
                 Log.d("show_volley", it)
-                val sType = object : TypeToken<List<Student>>() {}.type
+                val sType = object : TypeToken<Student>() {}.type
                 val result = Gson().fromJson<Student>(it, sType)
                 studentLD.value = result
 

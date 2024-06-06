@@ -43,7 +43,7 @@ class StudentDetailFragment : Fragment()
 
         viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
 
-//        val studentId = arguments?.getString("studentId") ?: ""
+//      val studentId = arguments?.getString("studentId") ?: ""
 
         var id = ""
         if (arguments!=null){
